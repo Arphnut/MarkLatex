@@ -1,0 +1,7 @@
+# We don't want the possibly created markdown format.
+*.md
+# Except the readme files.
+!README.md
+!readme.md
+# We don't want the LaTeX file.
+*.tex
