@@ -5,3 +5,5 @@
 !readme.md
 # We don't want the LaTeX file.
 *.tex
+# We don't want the pycache folder
+/__pycache__

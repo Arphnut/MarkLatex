@@ -21,6 +21,7 @@ from images import Images2LaTeX
 from links import Links2LaTeX
 from preamble_latex import Preamble2LaTeX
 from title import Title2LaTeX
+from special_character import SpecialCharacter2LaTeX
 
 
 def change_extension(filename, extension):
@@ -48,11 +49,11 @@ class Markdown2LaTeX():
         images = Images2LaTeX(effects.translation)
         preamble.add_packages(images.packages)
         links = Links2LaTeX(images.translation)
-        links.delete_reference()
+        special_character = SpecialCharacter2LaTeX(links.delete_reference())
         preamble.add_packages(links.packages)
         begin = preamble.preamble2Latex() + "\n\\begin{document}\n"
         end = "\n\\end{document}\n"
-        return begin + links.translation + end
+        return begin + special_character.translation + end
 
     def save(self, filename=None):
         latex = self.translate()

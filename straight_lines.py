@@ -20,13 +20,13 @@ class StraightLines2LaTeX():
     It first detect in the markdown code where there is such line.
     Then it transform it into a \\hrule for LaTeX to understand
 
-    Attributes:
-    -----------
-    text (str): The text in markdown format taht we want to transcript.
-
     Parameters:
     -----------
     text (str): The text in markdown format taht we want to transcript.
+
+    Attributes:
+    -----------
+    text (str): The text in markdown format that we want to transcript.
     lines (str): The previous text split into a list of line.
     straight_lines (list): A list containing the indices of the lines with a straight line.
     translation (str): The translation of 'text' into LaTeX.
